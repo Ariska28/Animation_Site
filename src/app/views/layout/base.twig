@@ -9,9 +9,14 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
+    {% block header %}
+        {% include '../components/header.twig' %}
+    {% endblock %}
+
+
     {% block body %}
     {% endblock %}
-etryry
+
     {% block scripts %}
         <script src="/js/libraries.js"></script>
     {% endblock %}
