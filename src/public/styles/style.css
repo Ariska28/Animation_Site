@@ -1,0 +1,72 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor; }
+
+.icon-ic-logo {
+  width: 188px;
+  height: 60px; }
+
+.icon-ic-loup {
+  width: 50px;
+  height: 50px; }
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  font-weight: 400;
+  src: url("../fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Roman.woff") format("woff"); }
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  font-weight: 100;
+  src: url("../fonts/HelveticaNeueCyr-Thin.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Thin.woff") format("woff"); }
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  font-weight: 500;
+  src: url("../fonts/HelveticaNeueCyr-Medium.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Medium.woff") format("woff"); }
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  font-weight: 700;
+  src: url("../fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Bold.woff") format("woff"); }
+
+@font-face {
+  font-family: "Recoleta";
+  font-weight: 300;
+  src: url("../fonts/Recoleta-Light.woff2") format("woff2"), url("../fonts/Recoleta-Light.woff") format("woff"); }
+
+@font-face {
+  font-family: "Recoleta";
+  font-weight: 500;
+  src: url("../fonts/Recoleta-Medium.woff2") format("woff2"), url("../fonts/Recoleta-Medium.woff") format("woff"); }
+
+@font-face {
+  font-family: "Recoleta";
+  font-weight: 400;
+  src: url("../fonts/Recoleta-Regular.woff2") format("woff2"), url("../fonts/Recoleta-Regular.woff") format("woff"); }
+
+@font-face {
+  font-family: "Recoleta";
+  font-weight: 600;
+  src: url("../fonts/Recoleta-SemiBold.woff2") format("woff2"), url("../fonts/Recoleta-SemiBold.woff") format("woff"); }
+
+@font-face {
+  font-family: "Recoleta";
+  font-weight: 700;
+  src: url("../fonts/Recoleta-Bold.woff2") format("woff2"), url("../fonts/Recoleta-Bold.woff") format("woff"); }
+
+.c-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  color: #000000; }
+  .c-header-list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none; }
+    .c-header-list-link {
+      text-decoration: none; }

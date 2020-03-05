@@ -48,7 +48,7 @@ module.exports = () => {
             dest: './',
             example: false,
             bust: false,
-            sprite: `${blinker.config.temporaryPath}/${blinker.config.svgInlineSpriteDirectory}/sprite_inline.svg`,
+            sprite: `${blinker.config.sourcePath}/${blinker.config.viewsDirectory}/sprite_inline.svg`,
             inline: false,
             render: {
               scss: {

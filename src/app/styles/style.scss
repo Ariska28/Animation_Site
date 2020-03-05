@@ -1,11 +1,16 @@
-//@import "sprites/png-sprite";
-//@import "sprites/svg-sprite";
-//@import "sprites/svg-sprite-inline";
 
-//Mixins
-//@import "mixins/png-sprite";
-//@import "mixins/svg-sprite";
+@import "variables/color";
+@import "variables/typography";
 
+/*-----------------------*/
 @import 'base/fonts';
+@import 'base/reset';
 
 @import 'components/header';
+
+@import 'elements/icon';
+@import 'elements/link-border';
+@import 'elements/link-background';
+
+@import 'variables/typography';
+
