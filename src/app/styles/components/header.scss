@@ -1,6 +1,9 @@
 .c-header {
   background-color: $c-yellow;
-  display: flex;
+  background-image: url("https://eep.io/images/yzco4xsimv0y/6V49Ou8jRqVfBvUptsJlhG/cd6f19b41d269e2819545b6292677ba6/ILLO_Hero_All-In-One_1520x912.png?w=760&q=95");
+  background-repeat: no-repeat;
+  background-position: 80% 70%;
+  background-size: 35%;
 
   &-wrapper {
     width: 100%;
@@ -8,18 +11,32 @@
     justify-content: space-between;
     align-items: center;
     padding: 3rem 1.875rem 0rem;
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $c-white;
+      border-bottom: 1px solid rgb(223, 223, 223);
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-right: 1.875rem;
+    }
   }
 
   &-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     &__list {
       display: flex;
       list-style-type: none;
-
       &-item {
         margin-right: 0.625rem;
+        @include media-breakpoint-up(xl) {
+          margin-right: 1.875rem;
+        }
       }
 
       &-svg {
@@ -31,6 +48,16 @@
         text-decoration: none;
         color: $c-brand;
         font-size: $fs-head;
+
+        &:hover {
+          color: $c-link;
+        }
+
+        &:hover .c-header-bar__list-svg {
+          transition: transform 0.2s ease-in;
+          color: $c-link;
+          transform: rotate(180deg);
+        }
       }
     }
 
@@ -40,7 +67,7 @@
         fill: $c-white;
         stroke: $c-black;
         width: 200px;
-        height: 70px;
+        height: 60px;
       }
     }
   }
@@ -52,6 +79,8 @@
 
     &__loup {
       margin-right: 20px;
+      background-color: transparent;
+      border: none;
       &-svg {
         font-size: $fs-remark;
         color: $c-brand;
@@ -60,5 +89,11 @@
         }
       }
     }
+  }
+
+  &-banner {
+    @extend .l-container;
+    padding-bottom: 50px;
+    padding-top: 50px;
   }
 }

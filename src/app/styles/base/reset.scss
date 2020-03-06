@@ -34,7 +34,7 @@ tr,
 th,
 td {
   border: 0;
-  outline: 0;
+  // outline: 0;
   vertical-align: baseline;
   background: transparent;
   font-size: 100%;
@@ -77,7 +77,7 @@ img {
 }
 
 * {
-  outline: none;
+  // outline: none;
   margin: 0;
   padding: 0;
   font-family: $font-base;
@@ -122,9 +122,8 @@ input[type="email"],
 input[type="password"],
 textarea {
   //  padding: 5px;
-  outline: none;
+  // outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
-

@@ -1,16 +1,21 @@
 
 @import "variables/color";
 @import "variables/typography";
+@import "variables/sizes";
+
+@import "mixins/breakpoints";
 
 /*-----------------------*/
 @import 'base/fonts';
 @import 'base/reset';
+@import 'base/layout';
 
 @import 'components/header';
 
 @import 'elements/icon';
 @import 'elements/link-border';
 @import 'elements/link-background';
+@import 'elements/content';
 
 @import 'variables/typography';
 

@@ -1,0 +1,26 @@
+.el-content {
+    width: 60%;
+    &__headline {
+        font-family: $font-title;
+        font-size: $fs-title;
+        font-weight: 400;
+        line-height: 1;
+        margin-top: 1.875rem;
+    }
+
+    &__paragraph {
+        font-family: $font-base;
+        font-size: $fs-remark;
+        font-weight: 300;
+        margin-top: 1.875rem;
+    }
+
+        &__link {
+            @extend .el-link-background;
+            margin-left: 0;
+            margin-top: 1.875rem;
+            padding: 1.2rem 2rem;
+            display: inline-block;
+        }
+    
+}
