@@ -9,4 +9,8 @@
     &:hover {
        background-color: $c-link-state; 
     }
+
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
 }   

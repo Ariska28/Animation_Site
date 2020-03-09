@@ -1,5 +1,4 @@
-.el-content {
-    width: 60%;
+.c-content {
     &__headline {
         font-family: $font-title;
         font-size: $fs-title;
@@ -8,7 +7,7 @@
         margin-top: 1.875rem;
     }
 
-    &__paragraph {
+    &__description {
         font-family: $font-base;
         font-size: $fs-remark;
         font-weight: 300;
@@ -22,5 +21,16 @@
             padding: 1.2rem 2rem;
             display: inline-block;
         }
+
+        @include media-breakpoint-down(sm) {
+            &__headline {
+                font-size: $fs-mobile;
+            }
+
+            &__paragraph {
+                font-size: $fs-base;
+            }
+        }
     
+
 }

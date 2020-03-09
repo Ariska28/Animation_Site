@@ -1,14 +1,10 @@
 <header class="c-header">
 	<div class="c-header-wrapper">
 		<div class="c-header-bar">
-			<div
-				class="c-header-bar__logo">
-				{# <svg class="c-header-bar__logo-svg">
-																	<use xlink:href="#ic-logo"></use>
-																</svg> #}
+			<a href="#" class="c-header-bar__logo">
 				<img src="/images/logo.svg" alt="mailchimp logo">
-			</div>
-			<nav class="c-header-bar__nav">
+			</a>
+			<nav class="c-header-bar__nav js-nav">
 				<ul class="c-header-bar__list">
 					<li class="c-header-bar__list-item">
 						<a href="#" class="c-header-bar__list-link">Why Mailchimp?</a>
@@ -27,7 +23,7 @@
 						<a href="#" class="c-header-bar__list-link">Resources
 							<svg class="el-icon c-header-bar__list-svg">
 								<use xlink:href="#ic-arrow"></use>
-							</use>
+							</svg>
 						</a>
 					</li>
 				</ul>
@@ -36,8 +32,8 @@
 
 		<div class="c-header-links">
 			<button class="c-header-links__loup">
-				<span class="el-icon__svg c-header-links__loup-svg">
-					<svg class="el-icon">
+				<span class="el-icon c-header-links__loup-svg">
+					<svg class="el-icon__svg">
 						<use xlink:href="#ic-loup"></use>
 					</svg>
 				</span>
@@ -46,24 +42,14 @@
 			<a href="#" class="el-link-background">Sign Up Free
 			</a>
 		</div>
+		
+		<button type="button" class="c-header__toggle js-menu-btn">
+			<span class="c-header__toggle-line"></span>
+			<span class="visually-hidden">
+				toggle mobile menu
+			</span>
+		</button>
 
-	</div>
-
-	<div class="c-header-banner">
-		<div class="c-header-banner__content">
-			<div class="el-content">
-				<h1 class="el-content__headline">Your business is growing. Now what?
-				</h1>
-
-				<p class="el-content__paragraph">
-					Get Mailchimp's all‑in‑one Marketing Platform to help you reach your goals faster. That's what.
-				</p>
-
-				<a href="#" class="el-content__link">Sign Up
-				</a>
-
-
-			</div>
-		</div>
 	</div>
 </header>
+
