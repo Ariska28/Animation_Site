@@ -16,9 +16,8 @@
 
         &__link {
             @extend .el-link-background;
-            margin-left: 0;
             margin-top: 1.875rem;
-            padding: 1.2rem 2rem;
+            padding: 1.25rem 2.5rem;
             display: inline-block;
         }
 
@@ -31,6 +30,4 @@
                 font-size: $fs-base;
             }
         }
-    
-
 }

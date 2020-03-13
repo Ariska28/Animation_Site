@@ -1,16 +1,12 @@
 .el-link-background{
-    padding: .8125rem 1rem;
+   
     background-color: $c-link;
     text-decoration: none;
     color: $c-white;
     font-weight: 700;
-    margin-left: 6px;
 
     &:hover {
        background-color: $c-link-state; 
     }
 
-    @include media-breakpoint-down(sm) {
-        display: none;
-    }
 }   

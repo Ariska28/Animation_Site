@@ -7,8 +7,24 @@
     display: flex;
     align-items: center;
   }
+
+  &__hidden {
+    display: none;
+    &.isActive {
+      display: block;
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 1; 
+      opacity: 0;
+      
+    }
+  }
   &__content {
     width: 50%;
+
   }
   &__media {
     width: 50%;
@@ -35,4 +51,11 @@
       padding-right: 20px;
     }
   }
+}
+
+body {
+  &.no-scroll {
+    overflow: hidden;
+  }
+  
 }
