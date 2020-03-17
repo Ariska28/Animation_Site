@@ -26,7 +26,7 @@
     &:hover {
       background-color: $c-white;
       border-bottom: 1px solid rgb(223, 223, 223);
-      & .c-header-links {
+      & .c-header-bar__container {
         opacity: 1;
       }
 
