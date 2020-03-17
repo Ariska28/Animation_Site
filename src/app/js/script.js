@@ -95,7 +95,7 @@ const mainNav = (function () {
         sabItemsAttr: 'data-toggle-level'
     };
     var header = $('.c-header'), nav = $('.c-header-bar__nav'),
-        links = $('.c-header-links'), scrollPrev = 0;
+        links = $('.c-header-bar__container'), scrollPrev = 0;
 
 
     $(window).scroll(function () {
@@ -141,85 +141,98 @@ const mainNav = (function () {
         }
     };
 
-    const closeSubItems = (level) => {
-        level = level ? level : 1;
-
-        if (model.subItems[level] && model.subItems[level].length) {
-            model.subItems[level].forEach((el) => {
-                el.parentElement.classList.remove(stateClasses.subItems);
-            });
-
-            if (model.subItems[level + 1]) {
-                closeSubItems(level + 1);
-            }
-
-        }
-    };
-
-    const toggleLevel = (item, itemLevel) => {
-        if (!item) {
-            closeSubItems();
-            return
-        }
-
-        let itemParent = item.parentElement;
-        let level = itemLevel ? itemLevel : parseInt(el.getAttribute(modelSelectors.sabItemsAttr));
-
-        if (itemParent.classList.contains(stateClasses.subItems)) {
-            closeSubItems(level);
-        }
-        else {
-            closeSubItems(level);
-            itemParent.classList.add(stateClasses.subItems);
-        }
-
-    };
-
     const init = () => {
         model.nav = document.querySelector(modelSelectors.navContainer);
         model.menuToggler = document.querySelectorAll(modelSelectors.menuToggler);
 
         let allSubMenus = model.nav.querySelectorAll(`[${modelSelectors.sabItemsAttr}]`);
 
-        allSubMenus.forEach(el => {
-            let level = parseInt(el.getAttribute(modelSelectors.sabItemsAttr));
-            if (!model.subItems[level]) {
-                model.subItems[level] = [];
-            }
-            let elLevel = model.subItems[level];
-            elLevel.push(el);
-
-            console.log(model.subItems);
-
-
-            el.addEventListener('click', function () {
-                toggleLevel(el, level);
-            });
-
-        });
 
         console.log(model.menuToggler);
-        // когда работаем с переключтелем используем цикл, т.к. их может быть больше 1
         model.menuToggler.forEach(el => {
             el.addEventListener('click', function (evt) {
                 console.log(evt);
-                toggleMenu();
+                submenu.classList.remove('isOpen');
+                item.classList.remove('isButton');
+                arrow.classList.remove('isHidden');
+                submenu2.classList.remove('isOpen');
+                item2.classList.remove('isButton');
+                arrow2.classList.remove('isHidden');
+                const subitems = Array.prototype.slice.call(
+                    sublist.children
+                );
+                const arrplus = Array.prototype.slice.call(
+                    document.querySelectorAll('.c-header-bar__sublist-plus')
+                );
+                const expend = document.querySelector('.c-header-bar__sublist-plus:not(.isExpand)')
 
+                for (let items of subitems) {
+                    items.children[1].classList.remove('isVisible');
+                    items.classList.remove('isBackground');
+                };
+                for (let plus of arrplus) {
+                    if(plus !== expend) 
+                    plus.classList.remove('isExpand')
+                }
+                toggleMenu();
             });
         });
+        let submenu = document.getElementById('sublist');
+        let item = document.getElementById('button');
+        let arrow = document.getElementById('arrow');
 
+        let submenu2 = document.getElementById('sublist-2');
+        let item2 = document.getElementById('button-2');
+        let arrow2 = document.getElementById('arrow-2');
+
+        item.onclick = function () {
+            submenu.classList.toggle('isOpen');
+            item.classList.toggle('isButton');
+            arrow.classList.toggle('isHidden');
+
+        };
+ 
+        item2.onclick = function () {
+            submenu2.classList.toggle('isOpen');
+            item2.classList.toggle('isButton');
+            arrow2.classList.toggle('isHidden');
+        };
+
+        submenu.onclick = function (e) {
+            e.target.parentNode.classList.toggle('isBackground')
+            e.target.nextElementSibling.classList.toggle('isVisible');
+            e.target.children[1].classList.toggle('isExpand');
+        }
 
 
         window.addEventListener('resize', function () {
             toggleMenu('close');
+
             closeSubItems();
         });
     };
-
-    // в ретурн вписываем то что должно быть доступно из вне
     return {
         init: init
     };
 })();
-
 mainNav.init();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
