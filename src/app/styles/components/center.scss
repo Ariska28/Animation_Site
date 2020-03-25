@@ -1,0 +1,44 @@
+.c-center {
+    padding-top: 7.5rem;    
+
+    &__media {
+        height: 0;
+        position: relative;
+        padding-bottom: 50%;
+        margin-bottom: 2.5rem;
+        &-video {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    &__content {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        &--width {
+            width: 47%;
+        }
+        &--width-big {
+            width: 80%;
+        }
+    }
+
+
+    @include media-breakpoint-down(lg) {
+        padding-top: 6.25rem;
+        &__content {
+            width: 75%;
+        }
+    }
+
+    @include media-breakpoint-down(xsm) {
+        padding-top: 5rem;
+        &__content {
+            width: 100%;
+        }
+    }
+}

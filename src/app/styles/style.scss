@@ -9,20 +9,32 @@
 @import 'base/fonts';
 @import 'base/reset';
 @import 'base/layout';
-
-
-@import 'sections/banner';
 @import 'base/availability';
-
-@import 'components/header';
-@import 'components/content';
-
-
+@import 'base/main';
 
 @import 'elements/icon';
-@import 'elements/link-border';
-@import 'elements/link-background';
+@import 'elements/title';
+@import 'elements/description';
+@import 'elements/btn';
+@import 'elements/subtitle';
+@import 'elements/subsubtitle';
+@import 'elements/item';
+@import 'elements/link';
+
+@import 'components/header';
+@import 'components/center';
+@import 'components/content';
+@import 'components/footer';
+
+@import 'sections/banner';
+@import 'sections/columns';
+@import 'sections/grid';
 
 
-@import 'variables/typography';
+
+
+
+
+
+
 

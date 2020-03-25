@@ -1,33 +1,85 @@
 .c-content {
-    &__headline {
-        font-family: $font-title;
-        font-size: $fs-title;
-        font-weight: 400;
-        line-height: 1;
-        margin-top: 1.875rem;
+    &__icons {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3.125rem;
     }
+    &__list {
+        list-style-type: none;
+        margin-bottom: 3.125rem;
 
-    &__description {
-        font-family: $font-base;
-        font-size: $fs-remark;
-        font-weight: 300;
-        margin-top: 1.875rem;
-    }
+        &-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-family: $font-title;
+            font-size: $fs-remark;
+            color: $c-brand;
+            &:hover .c-content__list-arrow{
+                margin-left: 25px;
+            }
+            
 
-        &__link {
-            @extend .el-link-background;
-            margin-top: 1.875rem;
-            padding: 1.25rem 2.5rem;
+            &:hover {
+                color: $c-link; 
+            }
+        }
+
+        &-arrow {
+            position: relative;
             display: inline-block;
-        }
+            height: 1px;
+            width: 20px;
+            background-color: $c-link;
+            margin-left: 10px;
 
-        @include media-breakpoint-down(sm) {
-            &__headline {
-                font-size: $fs-mobile;
+            &::after {
+                content: ' ';
+                position: absolute;
+                height: 1px;
+                width: 7px;
+                background-color: $c-link;
+                right: 0px;
+                top: -3px;
+                transform: rotate(45deg);
             }
 
-            &__paragraph {
-                font-size: $fs-base;
+            &::before {
+                content: ' ';
+                position: absolute;
+                height: 1px;
+                width: 7px;
+                background-color: $c-link;
+                right: 0px;
+                top: 3px;
+                transform: rotate(-45deg);
+            }
+
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        &__icons {
+            justify-content: flex-start;
+            &-item {
+                width: 17%;
+                padding-right: 1rem;
+                &:last-child{
+                    padding-right: 0; 
+                }
             }
         }
+    }
+
+    
+    @include media-breakpoint-down(xsm) {
+        &__icons {
+            flex-wrap: wrap;
+            &-item {
+                width: 33%;
+            }
+        }
+    }
 }

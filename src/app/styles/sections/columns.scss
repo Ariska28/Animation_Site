@@ -1,0 +1,119 @@
+.s-columns {
+    padding-top: 7.5rem;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+
+        &--reverse {
+            flex-direction: row;
+        }
+    }
+
+    &__content {
+        width: 50%;
+        padding-left: .625rem;
+
+        &--width {
+            width: 36%;
+        }
+    }
+
+    &__media {
+        width: 50%;
+        position: relative;
+        height: 0;
+        padding-bottom: 40%;
+
+        &--width {
+            width: 60%;
+        }
+
+        &--reverse {
+            padding-bottom: 37%;
+        }
+
+        &-video {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            padding-right: 8.95833%;
+
+            &--reverse {
+                padding-right: 0;
+                padding-left: 8.95833%;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding-top: 6.25rem;
+
+        &__wrapper {
+            flex-direction: column-reverse;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        &__content {
+            width: 100%;
+            padding-left: 0;
+        }
+
+        &__media {
+            width: 100%;
+            padding-bottom: 85%;
+            margin-bottom: 2.5rem;
+
+            &--width {
+                padding-bottom: 50%;
+                width: 100%;
+            }
+
+            &--width-big{
+                padding-bottom: 100%;
+            }
+
+            &-video {
+                padding-right: 0;
+                padding-left:0;
+                &--reverse {
+                    padding-right: 0;
+                    padding-left:0;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 5rem;
+
+        &__wrapper {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &__media {
+            padding-bottom: 85%;
+
+            &--width {
+                padding-bottom: 50%;
+            }
+
+            &--width-big{
+                padding-bottom: 100%;
+            }
+
+            &-video {
+                &--reverse {
+                    padding-right: 0;
+                    padding-left:0;
+                }
+            }
+        }
+    }
+}

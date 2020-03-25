@@ -1,0 +1,22 @@
+.el-link {
+    color: $c-link;
+    text-decoration: none;
+    font-size: $fs-head;
+    font-weight: 500;
+    margin-top: 1.875rem;
+    display: block;
+
+    &--inline {
+        display: inline-block;
+        color: $c-link;
+        text-decoration: none;
+        font-size: $fs-smaller;
+        font-weight: 600;
+        margin-top: 0;   
+    }
+
+    &:hover {
+        color: $c-link-state;
+        text-decoration: underline;
+    }
+}

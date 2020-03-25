@@ -94,8 +94,8 @@ const mainNav = (function () {
         navContainer: '.js-navigation',
         sabItemsAttr: 'data-toggle-level'
     };
-    var header = $('.c-header'), nav = $('.c-header-bar__nav'),
-        links = $('.c-header-bar__container'), scrollPrev = 0;
+    var header = $('.js-header'), nav = $('.js-nav'),
+        links = $('.js-links'), scrollPrev = 0;
 
 
     $(window).scroll(function () {

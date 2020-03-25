@@ -1,14 +1,12 @@
 .l-container {
-    max-width: $s-content;
-    margin-right: auto;
-    margin-left: auto;
-    padding:10px;
-    box-sizing: border-box;
-  }
-  
-  .l-main {
-    flex: 1 1 auto;
-  }
+  max-width: $s-content;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+}
 
-  
-  
+.l-main {
+  flex: 1 1 auto;
+}

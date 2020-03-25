@@ -8,6 +8,22 @@
   &.isScroll {
     background-color: transparent;
   }
+
+  &__hidden {
+    display: none;
+    &.isActive {
+      display: block;
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 0; 
+      opacity: 0;
+      
+    }
+  }
+
   &.isBackground {
     background-color: $c-white;
     border-bottom: 1px solid rgb(223, 223, 223);
@@ -205,19 +221,7 @@
       margin-left: auto;
     }
 
-    &__border {
-      @extend .el-link-border;
-      padding: 0.8125rem 2.3rem;
-      margin-right: 6px;
-    }
 
-    &__background {
-      @extend .el-link-background;
-      padding: 0.8125rem 1rem;
-      &--hidden {
-        display: none;
-      }
-    }
 
     &__search {
       margin-right: 20px;
@@ -311,16 +315,14 @@
     }
 
     &-bar {
-      padding-top: 67px;
       display: block;
       position: absolute;
       right: 0;
       top: 0;
       background-color: $c-white;
-      height: 100vh;
-      max-width: 450px;
-      width: 100%;
-      transform: translateX(100%);
+      height: 0;
+      width:0;
+      transform: translateX(100%) scaleX(0);
       &.isMobileActive {
         padding-top: 67px;
         display: block;

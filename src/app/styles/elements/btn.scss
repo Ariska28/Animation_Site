@@ -1,0 +1,101 @@
+.btn {
+    background-color: $c-link;
+    text-decoration: none;
+    color: $c-white;
+    font-weight: 700;
+    padding: 1.25rem 2.5rem;
+    display: inline-block;
+    font-size: $fs-link;
+    text-align: center;
+
+    &:hover {
+        background-color: $c-link-state;
+    }
+
+    &-header {
+        text-align: center;
+        padding: 0.8125rem 1rem;
+        background-color: $c-link;
+        text-decoration: none;
+        color: $c-white;
+        font-weight: 700;
+        display: inline-block;
+        font-size: $fs-link;
+
+        &--hidden {
+            display: none;
+        }
+
+        &:hover {
+            background-color: $c-link-state;
+        }
+    }
+
+
+    &-border {
+        padding: 0.8125rem 2.3rem;
+        margin-right: 6px;
+        box-shadow: inset 0 0 0 0.0625rem rgba(36, 28, 21, .4);
+        text-decoration: none;
+        color: $c-brand;
+        font-weight: 700;
+        font-size: $fs-link;
+
+        &:hover {
+            box-shadow: inset 0 0 0 0.0625rem rgb(36, 28, 21);
+        }
+
+    }
+
+    &-light {
+        padding: 1.25rem 2.5rem;
+        margin-right: 6px;
+        box-shadow: inset 0 0 0 0.0625rem  rgba(0,124,137,.3);
+        text-decoration: none;
+        color: $c-link;
+        font-weight: 700;
+        display: inline-block;
+        font-size:$fs-link;
+        text-align: center;
+        transition: box-shadow 0.2s ease-in;
+        &:hover {
+            box-shadow: inset 0 0 0 0.0625rem $c-link;
+        }
+
+    }
+
+    @include media-breakpoint-down(lg) {
+        &-border {
+            display: block;
+            width: 100%;
+            order: 1;
+            text-align: center;
+            margin-right: 0;
+            padding: 1.25rem 0;
+        }
+
+        &-header {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0.625rem;
+            padding: 1.25rem 0;
+
+            &--hidden {
+                display: block;
+                margin:0;
+                margin-left: auto;
+                text-align: center;
+                padding: 0.8125rem 1rem;
+                width: auto;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(xsm) {
+        &-header {
+            &--hidden {
+                display: none;
+            }
+        }
+    }
+}
