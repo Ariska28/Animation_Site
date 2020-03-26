@@ -5,6 +5,10 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 3.125rem;
+        flex-wrap: wrap;
+        &-link {
+            display: block;
+        }
     }
     &__list {
         list-style-type: none;
@@ -17,6 +21,7 @@
             font-family: $font-title;
             font-size: $fs-remark;
             color: $c-brand;
+
             &:hover .c-content__list-arrow{
                 margin-left: 25px;
             }
@@ -41,8 +46,8 @@
                 height: 1px;
                 width: 7px;
                 background-color: $c-link;
-                right: 0px;
-                top: -3px;
+                right: -1px;
+                top: -2.4px;
                 transform: rotate(45deg);
             }
 
@@ -52,12 +57,15 @@
                 height: 1px;
                 width: 7px;
                 background-color: $c-link;
-                right: 0px;
-                top: 3px;
+                right: -1px;
+                top: 2.4px;
                 transform: rotate(-45deg);
             }
 
         }
+    }
+    &__link {
+        display: inline-block;
     }
 
     @include media-breakpoint-down(lg) {
@@ -72,9 +80,17 @@
             }
         }
     }
-
     
     @include media-breakpoint-down(xsm) {
+        &__list {
+            &-link {
+                flex-wrap: wrap;
+                margin-bottom: 0.5rem;
+            }
+            &-arrow {
+                margin-top: 0.5rem;
+            }
+        }
         &__icons {
             flex-wrap: wrap;
             &-item {

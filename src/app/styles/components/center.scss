@@ -27,6 +27,10 @@
         }
     }
 
+    &__link {
+        display: inline-block;
+    }
+
 
     @include media-breakpoint-down(lg) {
         padding-top: 6.25rem;

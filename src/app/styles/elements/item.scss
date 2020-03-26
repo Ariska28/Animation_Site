@@ -28,9 +28,13 @@
         flex-direction: column;
         margin-bottom: 1.875rem;
         margin-top: 1.875rem;   
+
+        &__subheader {
+            font-size: $fs-base;
+        }
     }   
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xsm) {
         width: 100%; 
     }  
 }
