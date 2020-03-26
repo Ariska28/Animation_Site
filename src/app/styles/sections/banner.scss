@@ -7,6 +7,10 @@
 
   &__link {
     display: flex;
+
+    &--center {
+      justify-content: center;
+    }
   }
 
   &__wrapper {
