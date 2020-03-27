@@ -8,9 +8,15 @@
 
     &--bigger {
         font-size: $fs-remark;
+    }
+
+    &--center {
         margin-right:auto;
         margin-left:auto;
+        width: 47%;        
+        font-size: $fs-remark;
     }
+
     &--smaller {
         font-size: $fs-text;
         color: $c-gray-text;
@@ -31,7 +37,7 @@
     @include media-breakpoint-down(sm) {
         & {
             font-size: $fs-base-mobile;
-            &--bigger {
+            &--center {
                 font-size: $fs-base;
                 width: 100%;
             }
