@@ -1,0 +1,81 @@
+.c-publicity {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3.75rem;
+
+    &__link {
+        display: block;
+    }
+
+    &__block {
+        width: 33%;
+        padding-left: .625rem;
+        padding-right: .625rem;
+        padding-bottom: 1rem;
+    }
+
+    &__media {
+        width: 100%;
+        margin-bottom: 2.5rem;
+
+        &-img {
+            max-width: 100%;
+        }
+    }
+
+    &__content {
+        &-caption-small {
+            color: $c-brand;
+            text-transform: uppercase;
+            font-size: $fs-small;
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: .03125rem;
+            margin-bottom: .625rem;
+        }
+
+        &-caption {
+            font-size: $fs-remark;
+            color: $c-link;
+            font-family: $font-title;
+            font-weight: 400;
+            margin-bottom: .625rem;
+        }
+
+        &-description {
+            font-size: $fs-text;
+            color: $c-gray-text;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+    }
+
+    @include media-breakpoint-between(sm,lg) {
+
+        &__block {
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            margin-bottom: 3.75rem;
+            padding-bottom: 0rem;
+        }
+
+        &__link {
+            display: block;
+            width: 50%;
+            padding-left: .625rem;
+        }
+
+        &__content {
+            width: 50%;
+        }
+
+    }
+
+    @include  media-breakpoint-down(sm){
+        &__block {
+            width: 100%;
+            margin-bottom: 3.75rem;
+        }
+    }
+}

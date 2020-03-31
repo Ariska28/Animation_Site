@@ -1,7 +1,6 @@
 .c-footer {
     padding-top: 4.375rem;
     padding-bottom: 1.875rem;
-    border-top: 1px solid $c-black;
     background-color: $c-yellow;
 
     &__wrapper {
@@ -49,7 +48,7 @@
         border-right: 1px solid $c-black;
 
         &-headline {
-            font-size: $fs-title-footer;
+            font-size:$fs-subsubtitle;
             font-family: $font-title;
             font-weight: 400;
             width: 100%;

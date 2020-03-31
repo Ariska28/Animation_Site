@@ -1,11 +1,15 @@
-.c-center {
-    padding-top: 7.5rem;    
+.s-center {
+    &--background {
+        background-color: $c-light-gray;
+        padding: 7.5rem 0;
+    }
 
     &__media {
         height: 0;
         position: relative;
         padding-bottom: 50%;
         margin-bottom: 2.5rem;
+
         &-video {
             position: absolute;
             height: 100%;
@@ -16,31 +20,32 @@
     }
 
     &__content {
-        width: 60%;
+        width: 80%;
         margin-left: auto;
         margin-right: auto;
+
         &--width {
             width: 47%;
-        }
-        &--width-big {
-            width: 80%;
-        }
+            text-align: center;
+        }     
     }
-
-    &__link {
-        display: flex;
-    }
-
 
     @include media-breakpoint-down(lg) {
-        padding-top: 6.25rem;
+
+        &--background {
+            padding: 6.25rem 0;
+        }
+
         &__content {
             width: 75%;
         }
     }
 
     @include media-breakpoint-down(xsm) {
-        padding-top: 5rem;
+        &--background {
+            padding: 5rem 0;
+        }
+
         &__content {
             width: 100%;
         }

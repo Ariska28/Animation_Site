@@ -1,32 +1,18 @@
 .s-banner {
   background-color: $c-yellow;
 
-  &--margin {
-    margin-top: 7.5rem;
+  &--border {
+    border-bottom: 1px solid $c-black;
   }
 
-  &__link {
-    display: flex;
-
-    &--center {
-      justify-content: center;
-    }
-  }
 
   &__wrapper {
     padding-bottom: 3rem;
     padding-top: 6rem;
     display: flex;
     align-items: center;
-
-    &--reverse {
-      flex-direction: row-reverse;
-    }
   }
 
-  &--white {
-    background-color: $c-white;
-  }
 
 
   &__content {

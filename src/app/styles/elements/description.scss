@@ -24,7 +24,10 @@
         text-align: center;
         margin-top: 1.875rem;
         line-height: 1.4;
-        margin-bottom: 0;
+        margin-bottom: 1.875rem;
+        &--left {
+            text-align: left;
+        }
     }
     &--light {
         margin-top: .75rem;

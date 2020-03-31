@@ -1,15 +1,23 @@
 .btn {
-    background-color: $c-link;
-    text-decoration: none;
-    color: $c-white;
-    font-weight: 700;
-    padding: 1.25rem 2.5rem;
-    display: inline-block;
-    font-size: $fs-link;
-    text-align: center;
+    display: flex;
 
-    &:hover {
-        background-color: $c-link-state;
+    &--center {
+        justify-content: center;
+    }
+
+    &-green {
+        background-color: $c-link;
+        text-decoration: none;
+        color: $c-white;
+        font-weight: 700;
+        padding: 1.25rem 2.5rem;
+        display: inline-block;
+        font-size: $fs-link;
+        text-align: center;
+
+        &:hover {
+            background-color: $c-link-state;
+        }
     }
 
     &-header {
@@ -50,14 +58,15 @@
     &-light {
         padding: 1.25rem 2.5rem;
         margin-right: 6px;
-        box-shadow: inset 0 0 0 0.0625rem  rgba(0,124,137,.3);
+        box-shadow: inset 0 0 0 0.0625rem rgba(0, 124, 137, .3);
         text-decoration: none;
         color: $c-link;
         font-weight: 700;
         display: inline-block;
-        font-size:$fs-link;
+        font-size: $fs-link;
         text-align: center;
         transition: box-shadow 0.2s ease-in;
+
         &:hover {
             box-shadow: inset 0 0 0 0.0625rem $c-link;
         }
@@ -82,7 +91,7 @@
 
             &--hidden {
                 display: block;
-                margin:0;
+                margin: 0;
                 margin-left: auto;
                 text-align: center;
                 padding: 0.8125rem 1rem;

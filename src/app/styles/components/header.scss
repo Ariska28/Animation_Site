@@ -137,7 +137,7 @@
       &-link {
         text-decoration: none;
         color: $c-brand;
-        font-size: $fs-head;
+        font-size: $fs-link;
 
         &:hover {
           color: $c-link;
@@ -148,7 +148,7 @@
         background-color: transparent;
         border: none;
         color: $c-brand;
-        font-size: $fs-head;
+        font-size: $fs-link;
       }
     }
 
@@ -187,7 +187,7 @@
 
       &-item {
         margin: 0 0 0.625rem;
-        font-size: $fs-head;
+        font-size: $fs-link;
       }
 
       &-link {
@@ -509,7 +509,7 @@
   
         &-text {
           display: inline-block;
-          font-size: $fs-head;
+          font-size: $fs-link;
           color: $c-link;
           margin-left: 0.4rem;
         }
