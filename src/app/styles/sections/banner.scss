@@ -1,8 +1,20 @@
 .s-banner {
   background-color: $c-yellow;
+  padding-top: 3rem;
 
   &--border {
     border-bottom: 1px solid $c-black;
+    padding-top: 0;
+  }
+
+  &--no-padding {
+    padding: 0;
+  }
+  &--image {
+    background-image: url("https://eep.io/images/yzco4xsimv0y/4O9qgIdDeAUW4qR3b6kkmV/5fcc763c7af400ce6b2b317b62c786dd/Homepage_3.17-min.jpg?w=1920&q=95");
+    background-position: center;
+    padding-bottom: 9.5rem;
+    padding-top: 8.25rem;
   }
 
 
@@ -11,6 +23,8 @@
     padding-top: 6rem;
     display: flex;
     align-items: center;
+
+
   }
 
 
@@ -45,6 +59,11 @@
       flex-direction: column;
       padding-left: 10%;
       padding-right: 10%;
+      &--padding {
+        padding-left: 1.85rem;
+        padding-right: 1.85rem;
+        ;
+      }
     }
 
     &__content {

@@ -1,4 +1,64 @@
 .c-content {
+    @extend .l-wrapper;
+    &--reverse {
+        flex-direction: row-reverse;
+    }
+    &--center {
+        display: block;
+        text-align: center;
+        padding: 0 10%;
+
+        &--small {
+            padding: 0 26%;
+        }
+    }
+    &__text {
+        width: 50%;
+        padding-left: .625rem;
+
+        &--padding {
+            padding-left: 8.95833%;
+        }
+
+        &--padding-r {
+            padding-right: 8.95833%;
+        }
+
+        &--width {
+            width: 36%;
+        }
+
+        &--big {
+            width: 100%;
+            padding-left: 9.58333%;
+            padding-right: 9.58333%;
+        }
+
+        &-line {
+            background-color: #241c15;
+            border: 0;
+            display: block;
+            height: .0625rem;
+            margin: 1.875rem 0;
+            padding: 0;
+            width: 100%;
+        }
+
+    &-media {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        margin-top: 1.875rem;
+        margin-bottom: 3.125rem;
+    }
+
+    &-img {
+        max-width:100%;
+        max-height: 100%;
+    }
+
+    }
     &__icons {
         list-style-type: none;
         display: flex;
@@ -23,7 +83,6 @@
             margin: auto;
         }
     }
-
     &__list {
         list-style-type: none;
         margin-bottom: 3.125rem;
@@ -78,23 +137,50 @@
 
         }
     }
-
-    &__line {
-        background-color: #241c15;
-        border: 0;
-        display: block;
-        height: .0625rem;
-        margin: 1.875rem 0;
-        padding: 0;
-        width: 100%;
-    }
-
     &__media {
-        margin-bottom: 3.125rem;
-        margin-top: 1.875rem;
+        max-width: 50%;
+        max-height: 500px;
+
+        &-video {
+            height: 100%;
+            width: 100%;
+            padding-right: 8.95833%;
+
+            &--reverse {
+                padding-right: 0;
+                padding-left: 8.95833%;
+            }
+
+            &--reverse-no-padding {
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+
+        &-img {
+            height: 100%;
+            width: 100%;
+            padding-right: 0.625rem;
+
+        }
     }
+
+
 
     @include media-breakpoint-down(lg) {
+        &--reverse {
+            flex-direction: column-reverse;
+        }
+        &--center {
+            &--small {
+                padding: 0 10%;
+            }
+        }
+        &__text {
+            width: 100%;
+            padding-left: 0;       
+            padding-right: 0;
+        }
         &__icons {
             justify-content: flex-start;
 
@@ -107,10 +193,44 @@
                 }
             }
         }
+        &__media {
+            max-width: 100%;
+            max-height: 100%;
+            margin-bottom: 2.5rem;
+
+            &--big {
+                height: 0;
+                position: relative;
+                padding-bottom: 50%;
+                max-width: 100%;
+            }
+
+            &-video {
+                padding-right: 0;
+                padding-left: 0;
+
+                &--big {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    right: 0;
+                    padding-right: 0;
+                }
+
+                &--reverse {
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+            }
+        }
     }
 
     @include media-breakpoint-down(xsm) {
-        &__list {
+        &--center {
+            padding: 0 0;
+        }
+        &_list {
             &-link {
                 flex-wrap: wrap;
                 margin-bottom: 0.5rem;
@@ -119,13 +239,29 @@
             &-arrow {
                 margin-top: 0.5rem;
             }
+        }   
+        &__text {
+          &--big {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+          }
         }
-
         &__icons {
             flex-wrap: wrap;
 
             &-item {
                 width: 33%;
+            }
+        }
+        &__media {
+            max-width: 100%;
+            max-height: 100%;
+
+            &-video {
+                &--reverse {
+                    padding-right: 0;
+                    padding-left: 0;
+                }
             }
         }
     }

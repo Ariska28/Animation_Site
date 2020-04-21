@@ -14,12 +14,13 @@
 
 @import 'elements/icon';
 @import 'elements/title';
+@import 'elements/title-2';
+@import 'elements/title-3';
 @import 'elements/description';
 @import 'elements/btn';
-@import 'elements/subtitle';
-@import 'elements/subsubtitle';
 @import 'elements/item';
 @import 'elements/link';
+@import 'elements/media';
 
 @import 'components/header';
 @import 'components/content';
@@ -27,10 +28,9 @@
 @import 'components/footer';
 
 @import 'sections/banner';
-@import 'sections/columns';
+@import 'sections/base';
 @import 'sections/grid';
-@import 'sections/center';
-@import 'sections/advertising';
+
 
 
 

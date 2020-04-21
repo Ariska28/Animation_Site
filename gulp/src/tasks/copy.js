@@ -28,3 +28,4 @@ module.exports = () => {
       .pipe(blinker.gulp.dest(blinker.config.destinationPath + '/'))
   });
 };
+

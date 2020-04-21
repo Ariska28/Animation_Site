@@ -1,17 +1,8 @@
 .s-grid {
-    padding-top: 7.5rem;
+    @extend .l-spacing;
     &__wrapper {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-    }
-
-    
-    @include media-breakpoint-down(lg) {
-        padding-top: 6.25rem;
-    }
-
-    @include media-breakpoint-down(sm) {
-        padding-top: 5rem;
     }
 }

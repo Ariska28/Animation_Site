@@ -156,7 +156,7 @@
         &__nav {
             width: 63%;
             justify-content: space-between;
-            padding: 3%;
+            padding: 0 0 0 1%;
         }
 
         &__content {
@@ -173,10 +173,12 @@
 
             &-media {
                 width: 100%;
+                padding:0;
             }
 
             &-description {
                 width: 100%;
+                padding:0;
             }
         }
     }
@@ -204,6 +206,15 @@
     @include media-breakpoint-down(xsm) {
         &__inf {
             padding: 0 0 8% 0;
+            &-container {
+                max-width: 20rem;
+                margin: auto;
+            }
+        }
+
+        &__nav {
+            margin-left: -.625rem;
+            margin-right: -.625rem;
         }
 
         &__links {

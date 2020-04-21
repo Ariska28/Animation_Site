@@ -1,9 +1,9 @@
 .c-header {
-  background-color: $c-yellow;
-  position: sticky;
-  top: -2rem;
+  background-color:transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
   transition: transform, background-color 0.3s ease;
-
   z-index: 5;
   &.isScroll {
     background-color: transparent;
@@ -35,9 +35,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem 1.875rem 0rem;
+    padding: 1rem 1.875rem 0rem;
     border-bottom: 1px solid transparent;
     transition: background-color 0.3s ease;
+
+
 
     &:hover {
       background-color: $c-white;
@@ -157,7 +159,7 @@
       background-color: $c-white;
       list-style-type: none;
       position: absolute;
-      top: 6.7rem;
+      top: 5.2rem;
       left: 0;
       right: 0;
       padding: 2rem 6.25rem 5rem;

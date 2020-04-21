@@ -1,0 +1,32 @@
+.s-base {
+    @extend .l-spacing;
+    &--background {
+        background-color: $c-light-gray;
+        padding: 7.5rem 0;
+        margin: 0;
+    }
+
+    @include media-breakpoint-down(lg) {
+        &--background {
+            padding: 6.25rem 0;
+        }
+        &__container {
+            display: block;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+    }
+    
+    @include media-breakpoint-down(sm) {
+        &--background {
+            padding: 5rem 0;
+        }
+
+        &__container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    
+    }
+}
