@@ -15,7 +15,7 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "bootstrap": "^5.0.0-alpha1",
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.27.10",
     "check": "^1.0.0",
     "del": "^3.0.0",
     "files-exist": "^1.1.0",
